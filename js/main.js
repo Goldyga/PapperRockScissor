@@ -55,14 +55,13 @@ function setElementPosition() {
 	gameEngine.classList.toggle('toggle');
 	playerScore.classList.toggle('toggle');
 	computerScore.classList.toggle('toggle');
-	engineArea.innerHTML = '<h2>SELECT ONE OPTION</h2>';
 }
 
 //This function randomly selects the computer and passes the results to "playerSeclectOption" function.
 function compSelectOption() {
 	var possiblePicks = [paper, rock, scissor];
 	var compPics = possiblePicks[Math.floor(Math.random() * possiblePicks.length)];
-	engineArea.innerHTML += '<p>Player choice</p>' + compPics.outerHTML;
+	document.getElementById('computerChoice').innerHTML = '<p>Computer choice</p>' + compPics.outerHTML;
 	return compPics;
 }
 
@@ -72,7 +71,7 @@ function playerSeclectOption() {
 	var playerResult = document.getElementById('playerResult'),
 		compResult = document.getElementById('compResult');
 	paper.addEventListener('click', function(e) {
-		engineArea.innerHTML = '<p>Player choice</p>' + paper.outerHTML;
+		document.getElementById('playerChoice').innerHTML = '<p>Player choice</p>' + paper.outerHTML;
 		var compChoice = compSelectOption();
 		if (compChoice == paper) {}
 		else if (compChoice == scissor) {
@@ -86,7 +85,7 @@ function playerSeclectOption() {
 		checkResult();
 	});
 	rock.addEventListener('click', function(e) {
-		engineArea.innerHTML = '<p>Player choice</p>' + rock.outerHTML;
+		document.getElementById('playerChoice').innerHTML = '<p>Player choice</p>' + rock.outerHTML;
 		var compChoice = compSelectOption ();
 		if (compChoice == rock) {}
 		else if (compChoice == scissor) {
@@ -100,7 +99,7 @@ function playerSeclectOption() {
 		checkResult();
 	});
 	scissor.addEventListener('click', function(e) {	
-		engineArea.innerHTML = '<p>Player choice</p>' + scissor.outerHTML;
+		document.getElementById('playerChoice').innerHTML = '<p>Player choice</p>' + scissor.outerHTML;
 		var compChoice = compSelectOption ();
 		if (compChoice == scissor) {}
 		else if (compChoice == paper) {

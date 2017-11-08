@@ -128,9 +128,11 @@ body {
 		}
 
 		&--area {
+			height: 366px;
 			@include display-flex();
 			@include flex-direction(column);
 			@include justify-content(center);
+			flex-wrap: wrap;
 			@include border-radius(50px);
 			margin-bottom: 10px;
 			background-color: #0BBFB0;
@@ -138,27 +140,31 @@ body {
 			text-align: center;
 			transition: 2s;
 
-			h2 {
-				font-size: 40px;
-				padding: 110px 0px;
-			}
-			p {
-				font-size: 30px;
-				margin: 0;
-				padding-top: 15px;
-			}
-			button {
-				background-color: transparent;
-				border: none;
-				margin: 10px;
-				@include border-radius(20px);
-				font-size: 100px;
-				animation-name: buttonAnimation;
-    			animation-duration: 3s;
-			}
-			@keyframes buttonAnimation {
-    			from {color: transparent;}
-    			to {color: black;}
+			.playerChoice, .computerChoice {
+				h2 {
+					font-size: 40px;
+					padding: 110px 0px;
+				}
+				p {
+					display: block;
+					margin: 0;
+					font-size: 25px;
+					margin: 0;
+					padding-top: 15px;
+				}
+				button {
+					background-color: transparent;
+					border: none;
+					margin: 10px;
+					@include border-radius(20px);
+					font-size: 100px;
+					animation-name: buttonAnimation;
+	    			animation-duration: 3s;
+				}
+				@keyframes buttonAnimation {
+	    			from {color: transparent;}
+	    			to {color: black;}
+				}
 			}
 		}
 		&--btn {

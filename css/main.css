@@ -126,6 +126,7 @@ body {
       font-size: 70px;
       margin: 0; }
     .game__engine--area {
+      height: 366px;
       display: -webkit-flex;
       -moz-flex: flex;
       -ms-flex: flex;
@@ -138,6 +139,7 @@ body {
       -moz-justify-content: center;
       -ms-justify-content: center;
       justify-content: center;
+      flex-wrap: wrap;
       -webkit-border-radius: 50px;
       -moz-border-radius: 50px;
       -ms-border-radius: 50px;
@@ -147,14 +149,16 @@ body {
       color: #D16A1B;
       text-align: center;
       transition: 2s; }
-      .game__engine--area h2 {
+      .game__engine--area .playerChoice h2, .game__engine--area .computerChoice h2 {
         font-size: 40px;
         padding: 110px 0px; }
-      .game__engine--area p {
-        font-size: 30px;
+      .game__engine--area .playerChoice p, .game__engine--area .computerChoice p {
+        display: block;
+        margin: 0;
+        font-size: 25px;
         margin: 0;
         padding-top: 15px; }
-      .game__engine--area button {
+      .game__engine--area .playerChoice button, .game__engine--area .computerChoice button {
         background-color: transparent;
         border: none;
         margin: 10px;

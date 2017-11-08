@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+/*MIXINS*/
+body {
+  margin: 0 auto;
+  background-color: black;
+  font-family: 'Orbitron', sans-serif;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden; }
+
+.welcome__bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: black; }
+  .welcome__bar h1 {
+    color: #D16A1B;
+    padding: 10px;
+    margin: 0; }
+
+.log {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: 2;
+  transition: 1s; }
+  .log__txt {
+    height: 50px;
+    width: 300px;
+    border: 3px solid #D16A1B;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 1; }
+  .log__btn--play {
+    height: 50px;
+    width: 200px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #31B0D5;
+    border: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    outline: none;
+    transition: 100ms; }
+    .log__btn--play:hover {
+      opacity: 0.8; }
+  .log__alert {
+    color: #FF0000;
+    font-size: 20px; }
+  .log__icon {
+    margin: 10%;
+    font-size: 100px;
+    color: white; }
+
+.log__hide {
+  display: none; }
+
+.game {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-flex;
+  -moz-flex: flex;
+  -ms-flex: flex;
+  display: flex; }
+  .game__playerScore, .game__computerScore {
+    height: 100%;
+    width: 25%;
+    display: -webkit-flex;
+    -moz-flex: flex;
+    -ms-flex: flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+    text-align: center;
+    color: #0CCC2C;
+    transition: 4s; }
+    .game__playerScore--name, .game__computerScore--name {
+      font-size: 25px; }
+    .game__playerScore--result, .game__computerScore--result {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 150px; }
+  .game__computerScore {
+    color: #FF0000; }
+  .game__engine {
+    height: 100%;
+    width: 50%;
+    display: -webkit-flex;
+    -moz-flex: flex;
+    -ms-flex: flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s; }
+    .game__engine h2 {
+      color: red;
+      text-align: center;
+      font-size: 70px;
+      margin: 0; }
+    .game__engine--area {
+      display: -webkit-flex;
+      -moz-flex: flex;
+      -ms-flex: flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      border-radius: 50px;
+      margin-bottom: 10px;
+      background-color: #0BBFB0;
+      color: #D16A1B;
+      text-align: center;
+      transition: 2s; }
+      .game__engine--area h2 {
+        font-size: 40px;
+        padding: 110px 0px; }
+      .game__engine--area p {
+        font-size: 30px;
+        margin: 0;
+        padding-top: 15px; }
+      .game__engine--area button {
+        background-color: transparent;
+        border: none;
+        margin: 10px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        border-radius: 20px;
+        font-size: 100px;
+        animation-name: buttonAnimation;
+        animation-duration: 3s; }
+
+@keyframes buttonAnimation {
+  from {
+    color: transparent; }
+  to {
+    color: black; } }
+    .game__engine--btn {
+      display: inline-block;
+      text-align: center; }
+      .game__engine--btn button {
+        width: 140px;
+        margin: 10px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        border-radius: 20px;
+        background-color: #D16A1B;
+        box-shadow: 0px 0px 20px green;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        font-size: 80px; }
+        .game__engine--btn button:hover {
+          background-color: #0CCC2C; }
+
+.toggle {
+  height: 0%;
+  opacity: 0; }
+
+.hide {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */

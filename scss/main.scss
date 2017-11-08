@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import 'mixins';
+
+body {
+	margin: 0 auto;
+	background-color: black;
+	font-family: 'Orbitron', sans-serif;
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	overflow: hidden;
+}
+.welcome__bar {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: black;
+
+	h1 {
+		color: #D16A1B;
+		padding: 10px;
+		margin: 0;
+	}
+}
+.log {
+	@include position(absolute, $top:60px, $right: 0, $bottom: 0, $left: 0);
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	z-index: 2;
+	transition: 1s;
+
+	&__txt {
+		height: 50px;
+		width: 300px;
+		border: 3px solid #D16A1B;
+		margin-top: 5%;
+		margin-bottom: 2%;
+		font-size: 30px;
+		text-transform: uppercase;
+		text-align: center;
+		opacity: 1;
+	}
+	&__btn {
+	
+		&--play {
+			height: 50px;
+			width: 200px;
+			font-size: 30px;
+			cursor: pointer;
+			color: #FFFFFF;
+			background-color: #31B0D5;
+			border:  none;
+			@include border-radius(10px);	
+			outline: none;
+			transition: 100ms;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	&__alert {
+		color: #FF0000;
+		font-size: 20px;
+	}
+	&__icon {
+		margin: 10%;
+		font-size: 100px;
+		color: white;
+	}
+}
+.log__hide {
+		display: none;
+	}
+
+.game {
+	@include position(absolute, $top:60px, $right: 0, $bottom: 0, $left: 0);
+	@include display-flex();
+
+	&__playerScore {
+		height: 100%;
+		width: 25%;
+		@include display-flex();
+		@include flex-direction(column);
+		@include justify-content(flex-start);
+		text-align: center;
+		color: #0CCC2C;
+		transition: 4s;
+
+		&--name {
+			font-size: 25px;
+		}
+		&--result {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			font-size: 150px;
+		}
+	}
+	&__computerScore {
+		@extend .game__playerScore;
+		color: #FF0000;
+
+		&--name {
+			@extend .game__playerScore--name;
+		}
+		&--result {
+			@extend .game__playerScore--result;
+		}
+	} 
+	&__engine {
+		height: 100%;
+		width: 50%;
+		@include display-flex();
+		@include flex-direction(column);
+		justify-content: center;
+		transition: 2s;
+
+		h2 {
+			color: red;
+			text-align: center;
+			font-size: 70px;
+			margin: 0;
+		}
+
+		&--area {
+			@include display-flex();
+			@include flex-direction(column);
+			@include justify-content(center);
+			@include border-radius(50px);
+			margin-bottom: 10px;
+			background-color: #0BBFB0;
+			color: #D16A1B;
+			text-align: center;
+			transition: 2s;
+
+			h2 {
+				font-size: 40px;
+				padding: 110px 0px;
+			}
+			p {
+				font-size: 30px;
+				margin: 0;
+				padding-top: 15px;
+			}
+			button {
+				background-color: transparent;
+				border: none;
+				margin: 10px;
+				@include border-radius(20px);
+				font-size: 100px;
+				animation-name: buttonAnimation;
+    			animation-duration: 3s;
+			}
+			@keyframes buttonAnimation {
+    			from {color: transparent;}
+    			to {color: black;}
+			}
+		}
+		&--btn {
+			display: inline-block;
+			text-align: center;
+
+			button {
+				width: 140px;
+				margin: 10px;
+				@include border-radius(20px);
+				background-color: #D16A1B;
+				box-shadow: 0px 0px 20px green;
+				border: none;
+				cursor: pointer;
+				outline: none;
+				font-size: 80px;
+
+				&:hover {
+					background-color: #0CCC2C;
+				}
+			}
+		}
+	}
+}
+.toggle {
+	height: 0%;
+	opacity: 0;
+}
+.hide {
+	display: none;
+}

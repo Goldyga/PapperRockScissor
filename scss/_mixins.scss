@@ -1,0 +1,78 @@
+$primary-color: #000000;
+$element-color: #A0A0A0;
+$btn-state-color: #4278E5;
+$homeheader-color: #34821A;
+/*MIXINS*/
+@mixin display-flex() {
+	display: -webkit-flex;
+	-moz-flex: flex;
+	-ms-flex: flex;
+    display: flex;
+}
+@mixin justify-content($just) {
+	-webkit-justify-content: $just;
+	-moz-justify-content: $just;
+	-ms-justify-content: $just;
+    justify-content: $just;
+}
+@mixin align-content($alig) {
+	-webkit-align-content: $alig;
+	-moz-align-content: $alig;
+	-ms-align-content: $alig;
+    align-content: $alig;
+}
+@mixin align-self($self) {
+	-webkit-align-self: $self;
+	-moz-align-self: $self;
+	-ms-align-self: $self;
+    align-self: $self;
+}
+@mixin align-items ($aligI) {
+	-webkit-align-items: $aligI;
+	-moz-align-items: $aligI;
+	-ms-align-items: $aligI;
+    align-items: $aligI;
+}
+@mixin flex-direction($direct) {
+	-webkit-flex-direction: $direct;
+	-moz-flex-direction: $direct;
+	-ms-flex-direction: $direct;
+    flex-direction: $direct; 
+}
+@mixin flex-wrap($wrapOrNor) {
+	-webkit-flex-wrap: $wrapOrNor;
+    -moz-flex-wrap: $wrapOrNor; 
+    -ms-flex-wrap: $wrapOrNor; 
+    flex-wrap: $wrapOrNor;
+}
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+@mixin transition($sec) {
+	-webkit-transition: $sec;
+	-moz-transition: $sec;
+	-ms-transition: $sec;
+	transition: $sec;
+}
+@mixin transform($type, $value) {
+	-webkit-transform: #{$type}("(#{$value})");
+	-moz-transform: #{$type}("(#{$value})");
+	-ms-transform: #{$type}("(#{$value})");
+	transform: #{$type}("(#{$value})");
+}
+@mixin animation($nameKeyf, $timeVal, $repeat) {
+	-webkit-animation: $nameKeyf $timeVal  $repeat;
+	-moz-animation: $nameKeyf $timeVal  $repeat;
+	-ms-animation: $nameKeyf $timeVal  $repeat;
+    animation: $nameKeyf $timeVal  $repeat;
+}
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}

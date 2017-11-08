@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="user-scalable=no">
+        <title>Paper and Scissor Game</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/mediaqueries.css">
+    </head>
+    <body>
+
+<!--  WELCOME BAR START -->
+        <div class="welcome__bar">
+            <h1> Let`s Play The Game </h1>
+        </div>
+<!--  WELCOME BAR END -->
+
+<!-- PLACE USER LOGIN START -->
+        <div id="log" class="log">
+            <h2>Enter Your Name</h2>
+            <input type="text" id="playerName" onkeyup="inputKeyUp(event)" class="log__txt">
+            <div id="engineBtn" class="log__btn">
+                <button id="playBtn" class="log__btn--play">New Game</button>
+            </div>
+<!--  ALERT AREA - this div is used to display gameplay alert  -->
+            <div id="alertArea" class="log__alert">
+            </div>
+            <div class="log__icon">
+                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-scissors" aria-hidden="true"></i>
+            </div>
+        </div>
+<!-- PLACE USER LOGIN END -->
+
+<!--  CONTENT GAME START -->
+        <div class="game">
+<!--  PLAYER SCORE START - this div is used to add points to the player -->
+            <div id="playerScore" class="game__playerScore toggle">
+                <div id="playerScoreName" class="game__playerScore--name">
+                </div>
+                <div id="playerResult" class="game__playerScore--result">
+                    <p>0</p>
+                </div>
+            </div>
+<!--  PLAYER SCORE END -->
+
+            <div id="gameEngine" class="game__engine toggle">
+<!--  ENGINE AREA - this div is used to display player selections  -->  
+                 <div id="engineArea" class="game__engine--area">
+                </div>
+<!--  CONTROL BUTTONS - this div is used to display control buttons used by the player  --> 
+                <div id="ctrlBtn" class="game__engine--btn">
+                    <button id="paper" class= "paper button"><i class="fa fa-file-text-o" aria-hidden="true"></i></button>
+                    <button id="rock" class= "rock button"><i class="fa fa-circle" aria-hidden="true"></i></button>
+                    <button id="scissor" class= "scissor button"><i class="fa fa-scissors" aria-hidden="true"></i></button>
+                </div>
+            </div>
+
+<!--  COMPUTER SCORE START - this div is used to add points to the computer -->
+            <div id="computerScore" class="game__computerScore toggle">
+                <div class="game__computerScore--name">
+                    <h2>Computer Score</h2>
+                </div>
+                <div id="compResult" class="game__computerScore--result">
+                    <p>0</p>
+                </div>
+            </div> <!--  COMPUTER SCORE END -->
+        </div>  <!--  CONTENT GAME END -->
+
+    <script type="text/javascript" src="js/main.js"></script>	
+    </body>
+</html>

@@ -1,5 +1,6 @@
 # Paper Rock Scissor Game
 I think everybody knows what is a game Rock&Paper&Scissor, you don't need any strategy because the results is completely random, let's play ... :)
+[Live] (https://goldyga.github.io/miniapp_PapperRockScissor/)
 
 ![alt text](https://github.com/Goldyga/miniapp_PapperRockScissor/blob/master/imageMin/PRS.png?raw=true)
 ---

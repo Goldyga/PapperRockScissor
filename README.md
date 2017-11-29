@@ -4,7 +4,6 @@ I think everybody knows what is a game Rock&Paper&Scissor, you don't need any st
 [Live version](https://goldyga.github.io/miniapp_PapperRockScissor/)
 
 ![alt text](https://github.com/Goldyga/miniapp_PapperRockScissor/blob/master/imageMin/PRS.png?raw=true)
----
 ## Instruction
 * Enter your name
 * Click Play
